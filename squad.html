@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A9wa Jam3eya</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .gallery {
+            margin: 15px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .gallery img {
+            width: 200px;
+            /* Fixed width for uniform sizing */
+            height: 200px;
+            /* Fixed height for uniform sizing */
+            object-fit: cover;
+            /* Crops images to fit the container */
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .description {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gallery" onclick="showDescription(this)">
+        <img src="w.png" alt="Sample Image 1">
+        <div class="description">weed</div>
+    </div>
+
+    <div class="gallery" onclick="showDescription(this)">
+        <img src="s.png" alt="Sample Image 2">
+        <div class="description">akther wahed mnadhem</div>
+    </div>
+
+    <div class="gallery" onclick="showDescription(this)">
+        <img src="cr7.png" alt="Sample Image 3">
+        <div class="description">Hamdi Mohamed El Khames</div>
+    </div>
+
+    <div class="gallery" onclick="showDescription(this)">
+        <img src="n.png" alt="Sample Image 4">
+        <div class="description">Aramex CEO</div>
+    </div>
+
+    <div class="gallery" onclick="showDescription(this)">
+        <img src="k.png" alt="Sample Image 5">
+        <div class="description">bipolar li galbah abyedh</div>
+    </div>
+
+    <div class="gallery" onclick="showDescription(this)">
+        <img src="d.png" alt="Sample Image 6">
+        <div class="description">wabna w mouzika bnina</div>
+    </div>
+
+    <script>
+        function showDescription(element) {
+            const description = element.querySelector('.description');
+            const isVisible = description.style.display === 'block';
+            // Hide all descriptions first
+            document.querySelectorAll('.description').forEach(desc => {
+                desc.style.display = 'none';
+            });
+            // Toggle the clicked one
+            description.style.display = isVisible ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>
