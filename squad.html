@@ -24,11 +24,8 @@
 
         .gallery img {
             width: 200px;
-            /* Fixed width for uniform sizing */
             height: 200px;
-            /* Fixed height for uniform sizing */
             object-fit: cover;
-            /* Crops images to fit the container */
             border-radius: 10px;
             transition: transform 0.3s ease;
         }
@@ -49,13 +46,60 @@
             border-radius: 5px;
             text-align: center;
         }
+
+        footer {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        footer .contact a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        footer .contact a:hover {
+            text-decoration: underline;
+        }
+
+        footer form {
+            margin-top: 10px;
+        }
+
+        footer input[type="email"] {
+            padding: 8px;
+            width: 250px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        footer button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ffd700;
+            color: #333;
+            cursor: pointer;
+        }
+
+        footer button:hover {
+            background-color: #e0c200;
+        }
     </style>
 </head>
 
 <body>
     <div class="gallery" onclick="showDescription(this)">
         <img src="w.png" alt="Sample Image 1">
-        <div class="description">weed</div>
+        <div class="description">mta3 tochneb</div>
     </div>
 
     <div class="gallery" onclick="showDescription(this)">
@@ -82,6 +126,18 @@
         <img src="d.png" alt="Sample Image 6">
         <div class="description">wabna w mouzika bnina</div>
     </div>
+
+    <footer>
+        <p>© 2024 zbaber lksar w wahd m ras lkef. All rights reserved.</p>
+        <div class="contact">
+            <p>Contact us at: <a href="mailto:info@techtrendsblog.com">3asbalikyakorombo@gmail.com</a></p>
+            <p>Subscribe </p>
+            <form id="subscribeForm">
+                <input type="email" id="email" placeholder="med nayek email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </footer>
 
     <script>
         function showDescription(element) {
